@@ -40,4 +40,4 @@ When opening the deployed documentation in modern browsers, you will see errors 
 
 </details>
 
-This happens because [`YUIDoc`]() assets aren't served via HTTPS. On top of that it dynamically adds scripts that aren't served as HTTPS either. At this point, it is safe to click "Load Unsafe Scripts".
+This happens because [`YUIDoc`](https://yui.github.io/yuidoc/) assets aren't served via HTTPS. On top of that it dynamically adds scripts that aren't served as HTTPS either. At this point, it is safe to click "Load Unsafe Scripts".
