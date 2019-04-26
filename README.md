@@ -27,3 +27,17 @@ npm run dist
 
 Deployment is done via [now.sh](https://zeit.co/now). You would need push rights
 and an account in order to update the deployed documentation.
+
+## Mixed Content Issue
+
+When opening the deployed documentation in modern browsers, you will see errors about [Mixed Content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content):
+
+<details>
+  
+  <summary>Screenshot from Chrome</summary>
+  
+  <img width="342" alt="Screen Shot 2019-04-26 at 09 52 46" src="https://user-images.githubusercontent.com/1131196/56812549-2407dc00-6809-11e9-97b9-d5ed3be067d8.png">
+
+</details>
+
+This happens because [`YUIDoc`]() assets aren't served via HTTPS. On top of that it dynamically adds scripts that aren't served as HTTPS either. At this point, it is safe to click "Load Unsafe Scripts".
